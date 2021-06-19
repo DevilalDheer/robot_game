@@ -1,0 +1,30 @@
+<h1>Toy Robot Game</h1>
+<%= form_with url: "/", method: :get do |form| %>
+  <%= form.label "Input Value:" %>
+  <%= form.text_area :input, rows: 5, required: true %>
+  <%= form.submit "Run" %>
+<% end %>
+<br>
+Result(Output): <%= @result %>
+<hr>
+<br>
+<h2>Example Input and Output:</h2>
+<p>
+i. PLACE 0,0,NORTH
+<p>MOVE</p>
+<p>REPORT</p>
+<p>Output: 0,1,NORTH</p>
+<br>
+ii. PLACE 0,0,NORTH
+<p>LEFT</p>
+<p>REPORT</p>
+<p>Output: 0,0,WEST</p>
+<br>
+iii. PLACE 1,2,EAST
+<p>MOVE</p>
+<p>MOVE</p>
+<p>LEFT</p>
+<p>MOVE</p>
+<p>REPORT</p>
+<p>Output: 3,3,NORTH</p>
+</p>
